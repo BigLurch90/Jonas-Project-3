@@ -1,0 +1,92 @@
+@use '../../components/buttons' as button;
+
+.cards {
+    height: 100vh;
+    padding: 32px;
+    display: grid;
+    
+    &__inner {
+        // background-color: red;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 85px 1fr 1fr 85px;
+        grid-template-rows: 50% 50%;
+        row-gap: 3.5rem;
+        margin: 0;        
+    }
+
+    &__image {
+        height: 30rem;
+        width: 20rem;
+        margin: 0 var(--gap-l) 0 0;
+    }
+
+    &__title {
+        margin: 3.125rem 0 var(--gap-m) 0;
+    }
+
+    &__text {
+        max-width: 27rem;
+    }
+
+    &__button {
+        @include button.default($color: var(--color-dark));
+        color: var(--color-dark);
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        bottom: var(--gap-l);
+
+        svg {
+            opacity: 1;
+            fill: var(--color-dark-200);
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: var(--color-dark);
+            transition: all 0.2s;
+            
+            svg {
+                fill: var(--color-dark);
+                opacity: 1;
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    &__card-content {
+        display: flex;
+        height: 30rem;
+        width: 51rem;
+        position: relative;
+    }
+    
+    &__city {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: 0 var(--gap-xl) 0 0;
+    }
+
+    &__cliff {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    &__wildlife {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 0 var(--gap-xl) 0 0;
+    }
+   
+    &__mountain {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+}

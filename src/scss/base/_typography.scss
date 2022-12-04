@@ -18,7 +18,9 @@ h2 {
 }
 
 h3 {
-
+    font-size: var(--font-size-3);
+    font-weight: 600;
+    margin: 0;
 }
 
 h4 {
@@ -36,12 +38,15 @@ h6 {
 
 p {
     line-height: var(--line-height);
+    margin: 0;
+    font-size: var(--font-size-1);
 }
 
 a {
     color: var(--color-dark);
     text-decoration: none;
     line-height: var(--line-height);
+    
     &:hover {
         color: var(--color-accent);
     }
